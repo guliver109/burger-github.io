@@ -16,20 +16,18 @@
         {{/each}}
       </div>
 
-       <div class="col s6">
-         <h3>Are eaten!</h3>
-        {{#each burger}}
-          {{#if this.devoured}}
-            <div class='burgerEaten'>
-              <div>
+      <div class="col s6">
+          <h3>Are eaten!</h3>
+          {{#each burger}}
+            {{#if this.devoured}}
+              <div class='burgerEaten'>
                 {{this.burger_name}}
-                <form action="/burger/{{this.id}}?_method=DELETE" method="DELETE">
-                <button type="submit" class="waves-effect waves-light btn green z-depth-4">Remove</button>
-              </form>
+                <form action="/burger/{{this.id}}?_method=DELETE" method="POST">
+                  <button type="submit" id= "deleteButton" class='burgerAvailable'>Remove</button>
+                </form>
               </div>
-            </div>
-          {{/if}}
-        {{/each}}
+            {{/if}}
+          {{/each}}
       </div>
     </div>
   </div>

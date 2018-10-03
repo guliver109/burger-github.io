@@ -45,10 +45,10 @@ router.get("/", function(req, res) {
       });
   });
   //delete burgers
-  router.delete("api/burger/:id", function(req, res){
+  router.delete("/burger/:id", function(req, res){
     var condition = "id = " + req.params.id;
     
-    burger.deleteOne([condition], function(){
+    burger.deleteOne(condition, function(){
     res.redirect('/');
     });
   });

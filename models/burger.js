@@ -22,9 +22,10 @@ var burger = {
       });
     },
     //delete existing
-    deleteOne: function(conditionVal, cb){
-      orm.deleteOne('burger', 'id', conditionVal, function(res){
+    deleteOne: function(id, cb){
+      orm.deleteOne("burger", id, function(res) {
         cb(res);
+        console.log("hit burger remove");
       });
     }
 }

@@ -65,6 +65,7 @@ h2 {
   font-family: 'Fontdiner Swanky', cursive;
   font-size: 40px;
   margin: 50px;
+  color:#00FF7F;
 }
 h3 {
   text-align: center;
@@ -81,7 +82,7 @@ h3 {
 .addBurgerButton {
   font-family: 'Crafty Girls', cursive;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
 
   border-radius: 25px;
@@ -91,9 +92,21 @@ h3 {
   background-color:#304352;
   border: none;
 }
+#deleteButton {
+  font-family: 'Coiny', cursive, serif;
+  width: 40%;
+  margin: 0;
+  padding: 0px;
+  background-color:#00FF7F;
+  text-transform: uppercase;
+}
 
 .addBurgerButton:active {
  background-color: #FFC04C;
+}
+#name {
+  font-size: 30px;
+  color: #434343;
 }
 
 /*.burgerFooter {

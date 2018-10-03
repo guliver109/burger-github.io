@@ -91,16 +91,16 @@ function objToSql(ob) {
             });
         },
         //delete eaten burgers
-        deleteOne: function(table, condition, conditionVal, cb) {
-            var queryString = 'DELETE FROM ' + table + ' WHERE ' + condition + '=?';
-            // var queryString = "DELETE FROM " + table;
+        deleteOne: function(table, condition, cb) {
+            var queryString = "DELETE FROM " + table;
             
-            // queryString += " WHERE ";
-            // queryString += condition;
-            // queryString += objToSql(objColVals);
+            queryString += " WHERE ";
+            queryString += condition;
             
-            connection.query(queryString, [conditionVal], function(err, data){
-              if(err) throw err;
+            connection.query(queryString, function(err, data){
+              if(err){
+                throw err;
+              }
               cb(data);
             });
           }
